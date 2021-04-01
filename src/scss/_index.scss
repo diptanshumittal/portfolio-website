@@ -1,0 +1,496 @@
+// Define base and accent colors
+$base-color: #3498db;
+$base-color-hover: darken($base-color, 10%);
+
+// Define background colors
+$background: #fff;
+$background-alt: #f2f2f5;
+
+// Define border colors
+$border: #dcd9d9;
+
+// Define text colors
+$heading: #374054;
+$text: #74808a;
+
+html {
+  font-size: 14px;
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.heading {
+  position: relative;
+  display: inline-block;
+  font-size: 3.48832em;
+  font-weight: 300;
+  margin: 0 0 30px 0;
+
+  &:after {
+      position: absolute;
+      content: '';
+      top: 100%;
+      height: 1px;
+      width: 50px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      background: $base-color;
+  }
+}
+
+.bgstyle {
+  background-size: 1200% 1200%;
+  -webkit-animation: BackgroundAnimation 70s ease infinite;
+  -moz-animation: BackgroundAnimation 70s ease infinite;
+  -o-animation: BackgroundAnimation 70s ease infinite;
+  animation: BackgroundAnimation 70s ease infinite;
+  height: 100%;
+}
+
+.bg-gradient {
+  background: linear-gradient(rgba(245, 245, 245, 1), rgba(245, 245, 245, 0));
+}
+
+.navbar-transparent {
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 0.2s;
+}
+.navbar-white {
+  background-color: rgba(234, 236, 239, 0.81);
+  transition: background-color 0.2s;
+}
+.brand {
+  color: #363636 !important;
+}
+.nav-link {
+  transition: color, 0.2s;
+}
+.toggler {
+  border: none;
+  padding: 4px;
+  border-radius: 4px;
+  &:focus {
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+.socialicons {
+  color: white;
+  padding-left: 5px;
+  padding-right: 5px;
+  transition: all 0.8s;
+  margin: 4px;
+  &:hover {
+    color: black;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: all 0.8s;
+    margin: 4px;
+  }
+}
+
+.title {
+  height: 100%;
+  left: 0;
+  right: 0;
+  color: #fff;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.typist {
+  min-height: 6rem;
+  @media (min-width: 360px) {
+    min-height: 4rem;
+  }
+  @media (min-width: 768px) {
+    min-height: 2.5rem;
+  }
+}
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  &:hover {
+    box-shadow: 0 2rem 3rem rgba($black, 0.175) !important;
+    transform: translateY(-2px);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+}
+.skills-tabs {
+  flex-grow: 1;
+}
+.skills-tab {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.progress {
+  transform-origin: left;
+  & > * {
+    transform: scaleX(0);
+  }
+}
+.progress-bar-animation {
+  @extend .progress;
+  & > * {
+    animation: progress 1.5s ease-in-out forwards;
+  }
+}
+
+#skills {
+  padding: 50px 15px;
+  text-align: center;
+
+  h2 {
+      color: $heading;
+      margin-bottom: 50px;
+  }
+
+  ul {
+      display: block;
+      margin: 0 auto;
+      padding: 0;
+      max-width: 800px;
+  }
+
+  li {
+      display: inline-block;
+      margin: 7px;
+      padding: 5px 10px;
+      color: $heading;
+      background: darken($background-alt, 5%);
+      list-style: none;
+      cursor: default;
+      font-size: 1.2em;
+  }
+}
+
+#experience {
+  padding: 50px 15px;
+  text-align: center;
+  border-bottom: 1px solid $border;
+
+  h2 {
+      color: $heading;
+  }
+}
+
+#aboutme {
+  padding: 75px 15px;
+  border-bottom: 1px solid $border;
+  text-align: center;
+
+  h2 {
+      color: $heading;
+  }
+
+  p {
+      color: $text;
+      margin: 0 0 30px 0;
+  }
+}
+
+#education {
+  padding: 50px 15px 20px 15px;
+  border-bottom: 1px solid $border;
+  text-align: center;
+
+  h2 {
+      color: $heading;
+      margin-bottom: 50px;
+  }
+
+    h3 {
+        font-weight: 500;
+        font-size: 1.17em;
+        float: left;
+        margin: 0;
+        color: $heading;
+    }
+
+    span {
+        color: $text;
+        float: right;
+        font-size: 1rem;
+        font-weight: 600;
+
+    }
+
+    h4 {
+        font-size: 16px;
+        color: $text;
+        clear: both;
+        font-weight: 400;
+    }
+
+    p, ul {
+        margin: 0;
+        color: $text;
+        font-size: 0.9em;
+    }
+
+    ul {
+        padding: 0 0 0 15px;
+    }
+}
+
+.education-block {
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  padding: 15px;
+  border: 1px solid $border;
+  text-align: left;
+  background-color:#f8f9fa;
+}
+
+
+/*
+    --------------------------------
+    ----- 6. Experience Styles -----
+    --------------------------------
+*/
+
+#experience {
+  padding: 50px 15px;
+  text-align: center;
+  border-bottom: 1px solid $border;
+
+  h2 {
+      color: $heading;
+  }
+}
+
+#experience-timeline {
+  margin: 30px auto 0 auto;
+  position: relative;
+  max-width: 1000px;
+
+  &:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      bottom: 0;
+      left: 303px;
+      right: auto;
+      height: 100%;
+      width: 3px;
+      background: $base-color;
+      z-index: 0;
+  }
+
+  &:after {
+      position: absolute;
+      content: '';
+      width: 3px;
+      height: 40px;
+      background: $base-color;
+      background: linear-gradient(to bottom, $base-color, rgba($base-color, 0));
+      top: 100%;
+      left: 303px;
+  }
+}
+
+.vtimeline-content {
+  margin-left: 350px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  padding: 15px;
+  border-radius: 3px;
+  text-align: left;
+
+  h3 {
+      font-size: 1.5em;
+      font-weight: 300;
+      color: $heading;
+      display: inline-block;
+      margin: 0;
+  }
+
+  h4 {
+      font-size: 1.2em;
+      font-weight: 300;
+      color: #7e8890;
+      margin: 0 0 15px 0;
+  }
+
+  p {
+      color: $text;
+      font-size: 0.9em;
+      margin: 0;
+  }
+}
+
+.vtimeline-point {
+  position: relative;
+  display: block;
+  vertical-align: top;
+  margin-bottom: 30px;
+}
+
+.vtimeline-icon {
+  position: relative;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  background: $base-color;
+  border-radius: 50%;
+  float: left;
+  z-index: 99;
+  margin-left: 280px;
+
+  i {
+      display: block;
+      font-size: 2em;
+      margin-top: 10px;
+  }
+}
+
+.vtimeline-date {
+  width: 260px;
+  text-align: right;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  font-weight: 300;
+  color: #374054;
+}
+
+.background-alt {
+  background: $background-alt;
+}
+
+
+/*
+    -------------------------------
+    ----- 8. Project Styles -----
+    -------------------------------
+*/
+
+#projects {
+  padding: 50px 15px;
+  border-bottom: 1px solid $border;
+  text-align: center;
+
+  h2 {
+      color: $heading;
+      margin-bottom: 50px;
+  }
+}
+
+.project {
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 4px;
+}
+
+
+
+.project-info {
+  position: relative;
+  margin: 0;
+  padding: 30px 15px;
+
+  h3 {
+      font-size: 1.5em;
+      font-weight: 500;
+      color: $heading;
+      margin: 0 0 15px 0;
+  }
+
+  p {
+      color: $text;
+      margin: 0 0 15px 0;
+      font-size: 1em;
+  }
+}
+
+
+/*
+    -------------------------------
+    ----- 10. Contact Styles -----
+    -------------------------------
+*/
+
+#contact {
+  padding: 50px 15px;
+  text-align: center;
+
+  h2 {
+    color: $heading;
+    margin-bottom: 50px;
+  }
+}
+
+@mixin transition($duration: 0.5s, $func: ease, $property: all) {
+  transition: #{$duration} #{$func} #{$property};
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+      @content;
+  }
+
+  &:-moz-placeholder {
+      @content;
+      opacity: 1;
+  }
+
+  &::-moz-placeholder {
+      @content;
+      opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+      @content;
+  }
+}
+
+#contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+
+  input, textarea {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      border-radius: 4px;
+      border: none;
+      margin-bottom: 10px;
+      background: #fff;
+      color: #000;
+      @include transition();
+      @include placeholder {
+          color: #000;
+      }
+
+      &:focus {
+          outline: none;
+          background: #fff;
+      }
+  }
+
+  textarea {
+      height: 150px;
+      resize: none;
+  }
+
+}
