@@ -20,6 +20,7 @@ const API = "https://api.github.com";
 const GitHubProject = ({ heading, username, length, specfic }) => {
   const allReposAPI = `${API}/users/${username}/repos?sort=updated&direction=desc`;
   const specficReposAPI = `${API}/repos/${username}`;
+
   const dummyProjectsArr = new Array(length + specfic.length).fill(
     dummyProject
   );
@@ -56,7 +57,7 @@ const GitHubProject = ({ heading, username, length, specfic }) => {
 
   return (
     <Jumbotron fluid id="repos" className="bg-light m-0">
-      <Container >
+      <Container>
         <h2 className="display-4 pb-5 text-center">{heading}</h2>
         <Row>
           {projectsArray.length
