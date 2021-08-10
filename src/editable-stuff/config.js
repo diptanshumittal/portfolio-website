@@ -58,8 +58,8 @@ const about = {
   imageLink: require("../editable-stuff/profilpic.png"),
   imageSize: 375,
   message:
-    "My name is Diptanshu Mittal. I’m a undergrad student at Indraprastha Institute of Information Technology Delhi(IIITD) pursuing B.Tech in Computer Science and Applied Mathematics. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering.",
-  resume: "https://drive.google.com/file/d/1xEDtx7hHpW-qpGD4PnmWqhhqI2yyi0p-/view?usp=sharing",
+    "Hi, I'm Diptanshu Mittal, undergrad student at Indraprastha Institute of Information Technology Delhi(IIITD), pursuing B.Tech in Computer Science and Applied Mathematics. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering.",
+  resume: "https://drive.google.com/file/d/1xEDtx7hHpW-qpGD4PnmWqqI2yyi0p-/view?usp=sharing",
 };
 
 // PROJECTS SECTION

@@ -1,54 +1,144 @@
 import React from 'react';
-import {
-    Container,
-    Row,
-    Jumbotron
-} from "react-bootstrap";
+import {makeStyles} from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
+import {Container, Jumbotron} from "react-bootstrap";
+
+const useStyles = makeStyles({
+    base: {
+        boxShadow: "0 1rem 3rem rgb(0 0 0 / 18%) !important",
+        width: "70%",
+        margin: "2% auto"
+    },
+    root: {
+        minWidth: 275,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+    },
+    bullet: {
+        display: 'inline-block',
+        margin: '0 2px',
+        transform: 'scale(0.8)',
+    },
+    title: {
+        fontSize: '1.5em',
+        fontWeight: 550,
+    },
+    pos: {
+        fontSize: '1.15em',
+        marginBottom: 12,
+        float: "left",
+    },
+    titBox: {
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    }
+});
+
 
 const Experience = () => {
-    return (  
+    const classes = useStyles();
+    return (
         <section id="experience">
             <Container>
-                <Jumbotron fluid className="bg-white" >
-                        <h2 class="heading">Experience</h2>
-                        <div id="experience-timeline">
-                            <div class="vtimeline-point"><div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div><div class="vtimeline-block"><span class="vtimeline-date">May 2019 – June 2019</span><div data-date="May 2019 – June 2019" class="vtimeline-content">
-                                <h3>Svarochi</h3>
-                                <h4>Android App Developer Intern</h4>
-                                <p>
-                                    Designed an app for automatic testing of the lamps (Bluetooth enabled) being produced. Firebase maintained the database of the test and its result done by the user. The app connected to the light bulbs within 2 sec(average case).
-                                </p>
-                            </div></div></div>
-                            
-                            <div class="vtimeline-point"><div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div><div class="vtimeline-block"><span class="vtimeline-date">May 2019 – June 2019</span><div data-date="May 2019 – June 2019" class="vtimeline-content">
-                                <h3>PaceDat</h3>
-                                <h4>App Developer Intern</h4>
-                                <p>
-                                Designed a flutter app and database for the startup. The app served as the platform for the users to learn the chapters via notes and videos and raise queries. App also had the feature of live contest.
-                                </p>
-                            </div></div></div>
+                <Jumbotron fluid className="bg-white">
+                    <h2 class="heading">Experience</h2>
 
-                            <div class="vtimeline-point"><div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div><div class="vtimeline-block"><span class="vtimeline-date">May 2019 – June 2019</span><div data-date="May 2019 – June 2019" class="vtimeline-content">
-                                <h3>Mathskikaksha</h3>
-                                <h4>Web Developer Intern</h4>
-                                <p>
-                                Built a website using bootstrap and responsible for maintenance and updates of the website.
+                    <Card className={classes.base} variant="outlined" >
+                        <CardContent className={classes.root}>
+                            <div className={classes.titBox}>
+                                <Typography className={classes.title}>
+                                    Google Summer of Code
+                                </Typography>
+                                <p style={{margin: "0"}}>
+                                    4 Months
                                 </p>
-                            </div></div></div>
+                            </div>
+                            <Typography className={classes.pos} color="textSecondary">
+                                Student Developer
+                            </Typography>
+                            <Typography variant="body2" component="p"
+                                        style={{textAlign: "left", color: "rgba(0,0,0,0.5)", fontSize: "1em"}}>
+                                Working on the development of an online platform, CompEngine-Features, for comparing the
+                                performance of time-series analysis methods on real time-series data, including a wide
+                                range of neural dynamics. Backend - Django, Frontend - React, Database - MongoDB
+                            </Typography>
+                        </CardContent>
+                    </Card>
 
-                            <div class="vtimeline-point"><div class="vtimeline-icon"><i class="fa fa-map-marker"></i></div><div class="vtimeline-block"><span class="vtimeline-date">May 2019 – June 2019</span><div data-date="May 2019 – June 2019" class="vtimeline-content">
-                                <h3>Bhartiya Mahila Seva Sangh</h3>
-                                <h4>Community Work</h4>
-                                <p>
-                                Worked with the NGO (Bhartiya Mahila Seva Sangh) and volunteered in distribution chain of materials and collecting the handcrafted material. Volunteered in the DDU-GKY project of central government to help the unemployed youth in rural areas by providing them skills.
+                    <Card className={classes.base} variant="outlined" >
+                        <CardContent className={classes.root}>
+                            <div className={classes.titBox}>
+                                <Typography className={classes.title}>
+                                    Expedia Group
+                                </Typography>
+                                <p style={{margin: "0"}}>
+                                    2 Months
                                 </p>
-                            </div></div></div>
-                            
-                        </div>
+                            </div>
+                            <Typography className={classes.pos} color="textSecondary">
+                                Software Development Engineer Intern
+                            </Typography>
+                            <Typography variant="body2" component="p"
+                                        style={{textAlign: "left", color: "rgba(0,0,0,0.5)", fontSize: "1em"}}>
+                                Worked with Hotwire’s Data Foundation to create Microservices in spring boot with GraphQL endpoints and making them production-ready using AWS.
+                            </Typography>
+                        </CardContent>
+                    </Card>
+
+                    <Card className={classes.base} variant="outlined" >
+                        <CardContent className={classes.root}>
+                            <div className={classes.titBox}>
+                                <Typography className={classes.title}>
+                                    Bhartiya Mahila Seva Sangh
+                                </Typography>
+                                <p style={{margin: "0"}}>
+                                    3 Months
+                                </p>
+                            </div>
+                            <Typography className={classes.pos} color="textSecondary">
+                                Community Volunteer
+                            </Typography>
+                            <Typography variant="body2" component="p"
+                                        style={{textAlign: "left", color: "rgba(0,0,0,0.5)", fontSize: "1em"}}>
+                                Volunteered in supply chain team of NGO (Bhartiya Mahila Seva Sangh). Helped in
+                                distribution and collection of the handcrafted material. Volunteered in
+                                spreading the awareness for the DDU-GKY project of GOI.
+                            </Typography>
+                        </CardContent>
+                    </Card>
+
+                    <Card className={classes.base} variant="outlined" >
+                        <CardContent className={classes.root}>
+                            <div className={classes.titBox}>
+                                <Typography className={classes.title}>
+                                    Svarochi
+                                </Typography>
+                                <p style={{margin: "0"}}>
+                                    3 Months
+                                </p>
+                            </div>
+                            <Typography className={classes.pos} color="textSecondary">
+                                Android App Developer Intern
+                            </Typography>
+                            <Typography variant="body2" component="p"
+                                        style={{textAlign: "left", color: "rgba(0,0,0,0.5)", fontSize: "1em"}}>
+                                Designed an app for automatic testing of the lamps (Bluetooth enabled) being
+                                produced. Firebase maintained the database of the test and its result done
+                                by the user. The app connected to the light bulbs within 2 sec(average
+                                case).
+                            </Typography>
+                        </CardContent>
+                    </Card>
+
                 </Jumbotron>
             </Container>
         </section>
     );
 }
- 
+
 export default Experience;

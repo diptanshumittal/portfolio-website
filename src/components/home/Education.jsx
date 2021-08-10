@@ -12,8 +12,8 @@ const Education = () => {
                 <h2 class="heading">Education</h2>
                     <div class="education-block">
                         <h3>Indraprastha Institute of Information Technology, New Delhi</h3>
-                        <span> CGPA : 8.75 </span>
-                        <p><h4> B.Tech (CSAM) <span> (till 5th sem) </span><br/> 2018-2022 </h4></p>
+                        <span> CGPA : 9.05 </span>
+                        <p><h4> B.Tech (CSAM) <span> (till 6th sem) </span><br/> 2018-2022 </h4></p>
                     </div>
                     <div class="education-block">
                         <h3>Air Force Golden Jubliee Institute, New Delhi</h3>
